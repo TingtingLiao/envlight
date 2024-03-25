@@ -85,7 +85,7 @@ class EnvLight(torch.nn.Module):
             miplevel = self.get_mip(roughness).type(torch.float32)
             light = dr.texture(
                 self.specular[0][None, ...], 
-                l,
+                l.contiguous(),
                 mip=list(m[None, ...] for m in self.specular[1:]), 
                 mip_level_bias=miplevel[..., 0], 
                 filter_mode='linear-mipmap-linear', 
