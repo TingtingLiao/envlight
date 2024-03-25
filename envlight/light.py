@@ -82,7 +82,7 @@ class EnvLight(torch.nn.Module):
             light = dr.texture(self.diffuse[None, ...], l, filter_mode='linear', boundary_mode='cube')
         else:
             # specular light
-            miplevel = self.get_mip(roughness)
+            miplevel = self.get_mip(roughness).type(torch.float32)
             light = dr.texture(
                 self.specular[0][None, ...], 
                 l,
