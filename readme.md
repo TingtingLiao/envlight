@@ -8,16 +8,8 @@ This is basically a wrapped version of [`light.py` from nvdiffrec](https://githu
 
 Assume `torch` and [`nvdiffrast`](https://nvlabs.github.io/nvdiffrast/#linux) already installed.
 
-```bash
-pip install envlight
-
-# from github
-pip install git+https://github.com/ashawkey/envlight
-
-# or locally
-git clone https://github.com/ashawkey/envlight
-cd envlight
-pip install .
+```bash  
+pip install git+https://github.com/TingtingLiao/envlight 
 ```
 
 ### Usage
